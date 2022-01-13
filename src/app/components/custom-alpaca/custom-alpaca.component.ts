@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-custom-alpaca',
@@ -11,5 +11,5 @@ export class CustomAlpacaComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  @Input () alpaca: any;
 }

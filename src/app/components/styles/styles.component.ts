@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Img } from 'src/app/shared/interfaces/img';
 import { Accesorios } from '../../shared/interfaces/accesorios';
 
 @Component({
@@ -12,5 +13,6 @@ export class StylesComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  @Input () accesorios: Accesorios[]=[];
+  @Input () accesorios: Img[]=[];
+ 
 }

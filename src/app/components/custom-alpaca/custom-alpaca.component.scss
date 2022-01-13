@@ -1,4 +1,66 @@
-.fondo-alpaca{
+.wrapper{
+    background-color: blueviolet;
+    position: relative;
+    height: 350px;
     width: 350px;
-    height: 100%
+    .fondo-alpaca{
+        width: 100%;
+       
+    }
+    .cuello-alpaca{
+        width: 350px;
+        height: 350px;
+        position:absolute;
+        top: 0px;
+        left: -10px;
+
+    }
+    .leg-alpaca{
+        width: auto;
+        height: 350px;
+        position:absolute;
+        bottom: 0;
+        right: 0px;
+
+    }
+    .ears-alpaca{
+        width: auto;
+        height: 350px;
+        position:absolute;
+        top: -17px;
+        left: 0px;
+
+    }
+    .hair-alpaca{
+        width: 300px;
+        height: 340px;
+        position:absolute;
+        top: 2px;
+        left: 10px;
+
+    }
+    .nose-alpaca{
+        width: auto;
+        height: 350px;
+        position:absolute;
+        top: -4px;
+        left: -5px;
+
+    }
+    .eye-alpaca{
+        width: auto;
+        height: 350px;
+        position:absolute;
+        top: -4px;
+        left: -5px;
+
+    }
+    .mouth-alpaca{
+        width: auto;
+        height: 350px;
+        position:absolute;
+        top: -4px;
+        left: -5px;
+
+    }
 }

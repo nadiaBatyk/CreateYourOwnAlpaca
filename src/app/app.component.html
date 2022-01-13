@@ -5,14 +5,17 @@
   </div>
   <div class="seccion-ppal" fxFlex fxLayout="row">
     <div class="alpaca-container">
-     <app-custom-alpaca></app-custom-alpaca>
+     <app-custom-alpaca 
+     [alpaca]="alpaca"></app-custom-alpaca>
     </div>
     <div class="botones-container" fxLayout="column" fxLayoutAlign="flex-start">
       <app-accesories 
       [accesorios]="accesoriosArray"
       (change)="opcionSeleccionada($event)"
       ></app-accesories>
-      <app-styles [accesorios]="accesoriosArray"></app-styles>
+      <app-styles [accesorios]="arrayStyle"
+      
+      ></app-styles>
     </div>
   </div>
   <div class="extra-container">
