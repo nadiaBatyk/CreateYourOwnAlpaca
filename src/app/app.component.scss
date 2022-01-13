@@ -1,0 +1,38 @@
+.wrapper{
+    background-color: lightgray;
+    
+    
+    .titulo-container{
+        margin: 30px;
+        background-color: lightcyan;
+        width: 55%;
+        .titulo{
+            font-weight: 800;
+            font-size: 35px;
+            margin: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            
+        }
+    }
+    .seccion-ppal{
+        background-color: lightcoral;
+       width: 55%;
+        .alpaca-container{
+            
+            
+        }
+        .botones-container{
+            margin-left: 50px;
+            width: 50%;
+            background-color: lightgreen;
+            
+        }
+    }
+    .extra-container{
+        margin: 20px;
+        .btn{
+            margin: 0 20px;
+        }
+    }
+}

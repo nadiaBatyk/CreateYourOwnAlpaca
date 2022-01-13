@@ -1,0 +1,9 @@
+<div class="styles">
+    <h2 class="titulo-botones">Style</h2>
+    <mat-chip-list aria-label="accesorios">
+      <mat-chip *ngFor="let chip of accesorios" 
+      [value]="chip.nombre">
+        {{chip.nombre}}
+      </mat-chip>
+    </mat-chip-list>
+  </div>

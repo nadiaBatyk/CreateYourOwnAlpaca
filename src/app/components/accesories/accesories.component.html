@@ -1,0 +1,9 @@
+<div class="accesorios">
+    <h2 class="titulo-botones">Accessorize the alpaca </h2>
+    <mat-chip-list aria-label="accesorios" >
+      <mat-chip *ngFor="let chip of accesorios " (click)="emitirEvento(chip)"
+      [value]="chip.nombre">
+        {{chip.nombre}}
+      </mat-chip>
+    </mat-chip-list>
+  </div>
