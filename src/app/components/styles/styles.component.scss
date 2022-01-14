@@ -1,7 +1,29 @@
 .styles{
     height: 50%;
     padding: 10px;
-}
-.titulo-botones{
-    margin:0 ;
+    padding-bottom: 20px;
+    .titulo-botones{
+        margin:0 0 10px 0 ;
+        font-weight: 600;
+        font-size: 15px;
+        
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+    }
+    
+    mat-chip{
+        padding: 5px 20px;
+        ;
+        background-color: #FFFFFF;
+
+    }
+    mat-chip:hover{
+        color: #0D47A1;
+        border: 2px solid #0D47A1;
+        background-color: #FFFFFF
+    }
+    mat-chip:focus{
+        background-color: #1976D2;
+        color:#FFFFFF
+    }
 }

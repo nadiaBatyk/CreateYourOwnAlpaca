@@ -204,4 +204,18 @@ export class AppComponent {
         :this.alpaca[this.chipDefault.nombre.toLowerCase()]
       })
     }
+
+    resetAlpaca(){
+      this.alpaca={
+        hair:this.accesoriosArray[0].tipo[0].src,
+      ears:this.accesoriosArray[1].tipo[0].src,
+      eyes:this.accesoriosArray[2].tipo[0].src,
+      mouth:this.accesoriosArray[3].tipo[0].src,
+      neck:this.accesoriosArray[4].tipo[0].src,
+      leg:this.accesoriosArray[5].tipo[0].src,
+      accessories:this.accesoriosArray[6].tipo[0].src,
+      background:this.accesoriosArray[7].tipo[0].src,
+      nose:this.srcBase+'nose.png'
+      }
+    }
 }

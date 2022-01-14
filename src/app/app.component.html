@@ -3,7 +3,7 @@
   <div class="titulo-container" >
     <h1 class="titulo">Alpaca Generator</h1>
   </div>
-  <div class="seccion-ppal" fxFlex fxLayout="row">
+  <div class="seccion-ppal" fxFlex fxLayout.gt-md="row" fxLayout.lt-md="column" >
     <div class="alpaca-container">
      <app-custom-alpaca 
      [alpaca]="alpaca"></app-custom-alpaca>
@@ -20,6 +20,9 @@
     </div>
   </div>
   <div class="extra-container">
+    <button mat-raised-button class="btn" color="accent"
+    (click)="resetAlpaca()"
+    >Original Alpaca</button>
     <button mat-raised-button class="btn" >Random</button>
     <button mat-raised-button class="btn" color="primary">Download</button>
   </div>

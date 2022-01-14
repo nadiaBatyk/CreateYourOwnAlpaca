@@ -1,11 +1,11 @@
 .wrapper{
     background-color: lightgray;
-    
+    min-height: 100%;
     
     .titulo-container{
         margin: 30px;
         background-color: lightcyan;
-        width: 55%;
+        width: 51%;
         .titulo{
             font-weight: 800;
             font-size: 35px;
@@ -17,15 +17,15 @@
     }
     .seccion-ppal{
         background-color: lightcoral;
-       width: 55%;
-        .alpaca-container{
-            
-            
-        }
+      
         .botones-container{
-            margin-left: 50px;
-            width: 50%;
-            background-color: lightgreen;
+           
+            width: 350px;
+            
+            //background-color: lightgreen;
+            app-accesories,app-styles{
+                padding: 10px;
+            }
             
         }
     }
