@@ -1,14 +1,14 @@
 
 <div class="wrapper" fxLayout="column" fxLayoutAlign="center center">
-  <div class="titulo-container" >
-    <h1 class="titulo">Alpaca Generator</h1>
+  <div class="titulo-container" fxFlexAlign="flex-start">
+    <h1 class="titulo" >Alpaca Generator</h1>
   </div>
-  <div class="seccion-ppal" fxFlex fxLayout.gt-md="row" fxLayout.lt-md="column" >
+  <div class="seccion-ppal" fxFlex fxLayout.gt-md="row" fxLayout.lt-md="column" fxLayoutAlign="center center">
     <div class="alpaca-container">
      <app-custom-alpaca 
      [alpaca]="alpaca"></app-custom-alpaca>
     </div>
-    <div class="botones-container" fxLayout="column" fxLayoutAlign="flex-start">
+    <div class="botones-container" fxLayout="column"fxLayoutAlign="center">
       <app-accesories 
       [accesorios]="accesoriosArray"
       (change)="opcionSeleccionada($event)"
@@ -19,11 +19,18 @@
       ></app-styles>
     </div>
   </div>
+   
+  
   <div class="extra-container">
     <button mat-raised-button class="btn" color="accent"
     (click)="resetAlpaca()"
-    >Original Alpaca</button>
-    <button mat-raised-button class="btn" >Random</button>
-    <button mat-raised-button class="btn" color="primary">Download</button>
+    >Original</button>
+    <button mat-raised-button class="btn" 
+    (click)="randomAlpaca()"
+    >Random</button>
+    <a mat-raised-button class="btn" color="primary"
+    (click)="descargarImagenes()" 
+    >Download </a>
+    
   </div>
 </div>

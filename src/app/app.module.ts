@@ -9,6 +9,8 @@ import { AccesoriesComponent } from './components/accesories/accesories.componen
 import { StylesComponent } from './components/styles/styles.component';
 import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

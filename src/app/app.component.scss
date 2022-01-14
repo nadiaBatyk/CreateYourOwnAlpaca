@@ -1,30 +1,32 @@
 .wrapper{
-    background-color: lightgray;
-    min-height: 100%;
+    background-color: rgb(252, 252, 193);
+    
     
     .titulo-container{
-        margin: 30px;
-        background-color: lightcyan;
-        width: 51%;
+        margin: 30px 0px;
+      //  background-color: lightcyan;
+       
         .titulo{
             font-weight: 800;
-            font-size: 35px;
-            margin: 10px;
+            font-size: 2.3rem;
+            margin: 0 15px;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             
         }
     }
     .seccion-ppal{
-        background-color: lightcoral;
-      
+       // background-color: lightcoral;
+      //
         .botones-container{
            
             width: 350px;
             
-            //background-color: lightgreen;
+           // background-color: lightgreen;
             app-accesories,app-styles{
                 padding: 10px;
+                margin-left: 20px;
+                width: 95%;
             }
             
         }
@@ -32,7 +34,7 @@
     .extra-container{
         margin: 20px;
         .btn{
-            margin: 0 20px;
+            margin: 0 10px;
         }
     }
 }

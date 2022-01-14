@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { Accesorios } from './shared/interfaces/accesorios';
-import { MatChipListChange } from '@angular/material/chips';
 import { Img } from './shared/interfaces/img';
-import { ChildrenOutletContexts } from '@angular/router';
-
+import mergeImages from 'merge-images';
+import { saveAs } from 'file-saver';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -215,6 +214,41 @@ export class AppComponent {
       leg:this.accesoriosArray[5].tipo[0].src,
       accessories:this.accesoriosArray[6].tipo[0].src,
       background:this.accesoriosArray[7].tipo[0].src,
+      nose:this.srcBase+'nose.png'
+      }
+    }
+
+    
+     descargarImagenes(){
+      mergeImages(
+        
+        [this.alpaca.background,
+          this.alpaca.neck,
+          this.alpaca.leg,
+          this.alpaca.ears,
+          this.alpaca.hair,
+          this.alpaca.accessories,
+          this.alpaca.nose,
+         this.alpaca.eyes,
+         this.alpaca.mouth,
+         
+        ])
+    .then(b64 => {
+        saveAs(b64, 'yourAlpaca.png');
+        }
+      );
+      
+    }
+    randomAlpaca(){
+      this.alpaca={
+        hair:this.accesoriosArray[0].tipo[Math.floor(Math.random() * this.accesoriosArray[0].tipo.length)].src,
+      ears:this.accesoriosArray[1].tipo[Math.floor(Math.random() * this.accesoriosArray[1].tipo.length)].src,
+      eyes:this.accesoriosArray[2].tipo[Math.floor(Math.random() * this.accesoriosArray[2].tipo.length)].src,
+      mouth:this.accesoriosArray[3].tipo[Math.floor(Math.random() * this.accesoriosArray[3].tipo.length)].src,
+      neck:this.accesoriosArray[4].tipo[Math.floor(Math.random() * this.accesoriosArray[4].tipo.length)].src,
+      leg:this.accesoriosArray[5].tipo[Math.floor(Math.random() * this.accesoriosArray[5].tipo.length)].src,
+      accessories:this.accesoriosArray[6].tipo[Math.floor(Math.random() * this.accesoriosArray[6].tipo.length)].src,
+      background:this.accesoriosArray[7].tipo[Math.floor(Math.random() * this.accesoriosArray[7].tipo.length)].src,
       nose:this.srcBase+'nose.png'
       }
     }
