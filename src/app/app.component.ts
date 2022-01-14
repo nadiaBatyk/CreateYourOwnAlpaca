@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Accesorios } from './shared/interfaces/accesorios';
 import { MatChipListChange } from '@angular/material/chips';
 import { Img } from './shared/interfaces/img';
+import { ChildrenOutletContexts } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -51,11 +52,11 @@ export class AppComponent {
           },
           {
             name:'Backward',
-            src:this.srcBase+'hair/tilt-backward.png'
+            src:this.srcBase+'ears/tilt-backward.png'
           },
           {
             name:'Forward',
-            src:this.srcBase+'hair/tilt-forward.png'
+            src:this.srcBase+'ears/tilt-forward.png'
           },
         ],
       },
@@ -124,11 +125,11 @@ export class AppComponent {
         ],
       },
       {
-        nombre:'Accesories',
+        nombre:'Accessories',
         tipo:[
           {
-            name:'Default',
-            src:this.srcBase+'accessories/default.png'
+            name:'Flower',
+            src:this.srcBase+'accessories/flower.png'
           },
           {
             name:'Headphone',
@@ -159,31 +160,48 @@ export class AppComponent {
       }
       
     ]
-    chipDefault:Accesorios={
-      nombre:'',
-      tipo:[]
-    }
+    
     alpaca:any={
-      hairSrc:this.accesoriosArray[0].tipo[0].src,
-      earSrc:this.accesoriosArray[1].tipo[0].src,
-      eyeSrc:this.accesoriosArray[2].tipo[0].src,
-      mouthSrc:this.accesoriosArray[3].tipo[0].src,
-      neckSrc:this.accesoriosArray[4].tipo[0].src,
-      legSrc:this.accesoriosArray[5].tipo[0].src,
-      accesoriesSrc:this.accesoriosArray[6].tipo[0].src,
-      backgroundSrc:this.accesoriosArray[7].tipo[0].src,
+      hair:this.accesoriosArray[0].tipo[0].src,
+      ears:this.accesoriosArray[1].tipo[0].src,
+      eyes:this.accesoriosArray[2].tipo[0].src,
+      mouth:this.accesoriosArray[3].tipo[0].src,
+      neck:this.accesoriosArray[4].tipo[0].src,
+      leg:this.accesoriosArray[5].tipo[0].src,
+      accessories:this.accesoriosArray[6].tipo[0].src,
+      background:this.accesoriosArray[7].tipo[0].src,
       nose:this.srcBase+'nose.png'
     }
 
 
 
     arrayStyle:Img[]=this.accesoriosArray[0].tipo;
+    nuevoStyle:string=''
+    chipDefault:Accesorios={
+      nombre:'',
+      tipo:[]
+    }
     opcionSeleccionada(chip:Accesorios){
-      console.log(chip.nombre)
+      //console.log(chip.nombre)
       let index = this.accesoriosArray.indexOf(chip);
-      console.log(index)
-      console.log(this.accesoriosArray[index].nombre)
+     // console.log(index)
+     // console.log(this.accesoriosArray[index].nombre)
+     //aca paso los estilos de cada accesorio al array
       this.arrayStyle=this.accesoriosArray[index].tipo;
+      this.chipDefault={
+        nombre:chip.nombre,
+        tipo:chip.tipo
+      }
       
+    }
+    
+    estiloSeleccionado(styleChip:string){
+      this.nuevoStyle=styleChip
+      console.log(styleChip)
+      this.chipDefault.tipo.forEach(item=>{
+        item.name===this.nuevoStyle
+        ?this.alpaca[this.chipDefault.nombre.toLowerCase()]=item.src
+        :this.alpaca[this.chipDefault.nombre.toLowerCase()]
+      })
     }
 }

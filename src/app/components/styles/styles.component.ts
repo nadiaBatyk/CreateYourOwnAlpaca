@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Img } from 'src/app/shared/interfaces/img';
 import { Accesorios } from '../../shared/interfaces/accesorios';
 
@@ -14,5 +14,9 @@ export class StylesComponent implements OnInit {
   ngOnInit(): void {
   }
   @Input () accesorios: Img[]=[];
- 
+  @Output() change: EventEmitter<string>= new EventEmitter();
+
+  emitirEvento($event:string){
+    this.change.emit($event)
+  }
 }
