@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Accesorios } from './shared/interfaces/accesorios';
 import { Img } from './shared/interfaces/img';
 import mergeImages from 'merge-images';
@@ -9,6 +9,8 @@ import { saveAs } from 'file-saver';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  
   title = 'alpaca';
   srcBase:string='../assets/alpaca/';
   
@@ -181,11 +183,8 @@ export class AppComponent {
       tipo:[]
     }
     opcionSeleccionada(chip:Accesorios){
-      //console.log(chip.nombre)
+      
       let index = this.accesoriosArray.indexOf(chip);
-     // console.log(index)
-     // console.log(this.accesoriosArray[index].nombre)
-     //aca paso los estilos de cada accesorio al array
       this.arrayStyle=this.accesoriosArray[index].tipo;
       this.chipDefault={
         nombre:chip.nombre,
@@ -196,7 +195,7 @@ export class AppComponent {
     
     estiloSeleccionado(styleChip:string){
       this.nuevoStyle=styleChip
-      console.log(styleChip)
+     
       this.chipDefault.tipo.forEach(item=>{
         item.name===this.nuevoStyle
         ?this.alpaca[this.chipDefault.nombre.toLowerCase()]=item.src
